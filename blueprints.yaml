@@ -1,0 +1,27 @@
+name: Rigel
+version: 0.1.0
+description: Simple blog theme for Grav
+icon: rebel
+author:
+  name: Gianluca Rigoletti
+  email: gianluca.rigoletti@gmail.com
+homepage: https://github.com/gianluca-rigoletti/grav-theme-rigel
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/gianluca-rigoletti/grav-theme-rigel/issues
+readme: https://github.com/gianluca-rigoletti/grav-theme-rigel/blob/develop/README.md
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in Menu
+        highlight: 1
+        default: 1
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+          type: bool
