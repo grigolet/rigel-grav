@@ -1,0 +1,14 @@
+{% embed 'partials/base.html.twig' %}
+
+	{% block content %}
+		{% if config.plugins.breadcrumbs.enabled %}
+			{% include 'partials/breadcrumbs.html.twig' %}
+		{% endif %}
+
+		<article class="blog__post">
+			{{ page.content }}
+		</article>
+		
+	{% endblock %}
+
+{% endembed %}

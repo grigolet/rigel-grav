@@ -14,14 +14,17 @@
     <link rel="canonical" href="{{ page.url(true, true) }}" />
 
     {% block stylesheets %}
-        {% do assets.addCss('http://yui.yahooapis.com/pure/0.6.0/pure-min.css', 100) %}
-        {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', 99) %}
-        {% do assets.addCss('theme://css/custom.css', 98) %}
+        {% do assets.addCss('theme://css/sm.css', {
+            'media':'screen and (max-width: 575px)'
+        }) %}
+        {% do assets.addCss('theme://css/md.css', {
+            'media': 'screen and (min-width: 576px)'
+        }) %}
     {% endblock %}
     {{ assets.css() }}
 
     {% block javascripts %}
-        {% do assets.addJs('jquery', 100) %}
+        {% do assets.AddJs('theme://js/navigation.js') %}
     {% endblock %}
     {{ assets.js() }}
 
@@ -29,8 +32,8 @@
 </head>
 <body id="top" class="{{ page.header.body_classes }}">
 
-{% block header %}
-    <div class="header">
+{# {% block header %}
+    <header class="header">
         <div class="wrapper padding">
             <a class="logo left" href="{{ base_url == '' ? '/' : base_url }}">
                 <i class="fa fa-rebel"></i>
@@ -42,23 +45,44 @@
             </nav>
             {% endblock %}
         </div>
-    </div>
+    </header>
+{% endblock %} #}
+
+{% block header %}
+    <header class="menu__header">
+        <h2 class="menu__title">
+            <a href="{{ base_url == '' ? '/' : base_url }}">
+                {{ config.site.title }}
+            </a>
+        </h2>
+        {% block header_navigation %}
+        <nav class="menu__navbar">
+            {% include 'partials/navigation2.html.twig' %}
+        </nav>
+        {% endblock %}
+    </header>
 {% endblock %}
 
-{% block body %}
+{# {% block body %}
     <section id="body">
         <div class="wrapper padding">
         {% block content %}{% endblock %}
         </div>
     </section>
+{% endblock %} #}
+
+{% block body %}
+    <main class="main">
+        {% block content %} {% endblock %}
+    </main>
 {% endblock %}
 
 {% block footer %}
-    <div class="footer text-center">
+    <footer class="footer text-center">
         <div class="wrapper padding">
             <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="http://www.rockettheme.com">RocketTheme</a>.</p>
         </div>
-    </div>
+    </footer>
 {% endblock %}
 
 {% block bottom %}
