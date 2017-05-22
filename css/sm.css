@@ -86,4 +86,10 @@ body {
   display: flex;
   justify-content: space-around; }
 
+.footer__links {
+  display: flex;
+  justify-content: space-around; }
+.footer__designed-by {
+  text-align: center; }
+
 /*# sourceMappingURL=sm.css.map */

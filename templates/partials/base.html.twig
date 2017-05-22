@@ -78,10 +78,19 @@
 {% endblock %}
 
 {% block footer %}
-    <footer class="footer text-center">
-        <div class="wrapper padding">
-            <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="http://www.rockettheme.com">RocketTheme</a>.</p>
-        </div>
+    <footer class="footer">
+        <ul class="footer__links">
+            {% for page in pages.children.visible %}
+                {% set current_page = (page.active or page.activeChild) ? '--active' : '' %}
+                <li class="menu__item{{ current_page }}">
+                    <a href="{{ page.url }}">
+                        {{ page.menu }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        <hr>
+        <h4 class="footer__designed-by">Designed by me</h4>
     </footer>
 {% endblock %}
 
