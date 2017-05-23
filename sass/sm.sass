@@ -5,20 +5,40 @@ body
     display: flex
     flex-direction: column
     min-height: 100vh
+    color: $primary-text
 
 .main
     flex: 1
+    > h1
+        font-family: $bold-font-family
+        font-size: $font-size-4
+        text-align: center
+        padding: $spacing-5 $spacing-4
 
 .menu
     &__header
         display: flex
         flex-direction: row
+        background: $dark-primary
     &__title
         flex: 3
+        padding: $spacing-3 $spacing-4
+        font-family: $bold-font-family
+        font-size: $font-size-3
+        a
+            color: $text
+            text-decoration: none
     &__navbar
         display: flex
         align-items: center
         justify-content: center
+        padding: $spacing-3 $spacing-4
+    &__button
+        background: $dark-primary
+        border: none
+        color: $text
+        font-family: $bold-font-family
+        padding: 0
     &__list
         display: none
         position: absolute
@@ -27,7 +47,20 @@ body
         left: 5vw
         text-align: center
 
+.blog
+    &__item
+        padding: $spacing-4
+        &:first-child
+            padding-top: 0
+
 .item
+    &__title
+        font-family: $bold-font-family
+        text-transform: uppercase
+        font-size: $font-size-3
+        a
+            text-decoration: none
+
     &__figure
         width: 100%
         padding-bottom: 56.25%
@@ -43,19 +76,29 @@ body
         flex-direction: column
         > div
             display: flex
+    &__info
+        font-style: italic
+        color: $secondary-text
     &__author
         flex: 3
     &__time
         flex: 1
     &__tags
+        text-transform: uppercase
         p
             flex: 1
+            font-weight: bolder
 
 .tags
     &__list
         flex: 3
         display: flex
         justify-content: space-around
+        flex-wrap: wrap
+    &__item
+        padding: 0 $spacing-2
+        text-decoration: none
+        border: $spacing-1
 
 .footer
     &__links

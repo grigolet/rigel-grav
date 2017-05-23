@@ -7,11 +7,9 @@
 
         {% if blog_image %}
         <div class="flush-top blog-header blog-header-image" style="background-image: url({{ blog_image.url }});">
-        {% else %}
-        <div class="blog-header">
+        </div>
         {% endif %}
             {{ page.content }}
-        </div>
 
             {% if config.plugins.breadcrumbs.enabled %}
                 {% include 'partials/breadcrumbs.html.twig' %}

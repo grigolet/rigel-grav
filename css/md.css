@@ -1,4 +1,22 @@
-body {
-  background: red; }
+.menu__header {
+  margin: 0 24rem; }
+.menu__title {
+  flex: 1; }
+.menu__navbar {
+  flex: 1; }
+.menu__item {
+  list-style-type: none; }
+.menu__button--hidden-md {
+  display: none; }
+.menu__list {
+  all: initial;
+  display: flex;
+  flex-grow: inherit;
+  justify-content: space-around; }
+
+.main {
+  margin: 0 24rem; }
+  .main h1 {
+    text-align: center; }
 
 /*# sourceMappingURL=md.css.map */

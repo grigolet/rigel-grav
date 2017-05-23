@@ -1,4 +1,23 @@
 @import variables
 
-body
-    background: red
+.menu
+    &__header
+        margin: 0 $spacing-9
+    &__title
+        flex: 1
+    &__navbar
+        flex: 1
+    &__item
+        list-style-type: none
+    &__button
+        &--hidden-md
+            display: none
+    &__list
+        all: initial
+        display: flex
+        flex-grow: inherit
+        justify-content: space-around
+.main
+    margin: 0 $spacing-9
+    h1
+        text-align: center

@@ -12,10 +12,11 @@
 
     <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
+    {# <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet"> #}
 
     {% block stylesheets %}
         {% do assets.addCss('theme://css/sm.css', {
-            'media':'screen and (max-width: 575px)'
+            'media':'screen and (max-width: 4000px)'
         }) %}
         {% do assets.addCss('theme://css/md.css', {
             'media': 'screen and (min-width: 576px)'
