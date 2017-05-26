@@ -82,8 +82,8 @@
     <footer class="footer">
         <ul class="footer__links">
             {% for page in pages.children.visible %}
-                {% set current_page = (page.active or page.activeChild) ? '--active' : '' %}
-                <li class="menu__item{{ current_page }}">
+                {% set current_page = (page.active or page.activeChild) ? 'menu__item--active' : '' %}
+                <li class="menu__item {{ current_page }}">
                     <a href="{{ page.url }}">
                         {{ page.menu }}
                     </a>

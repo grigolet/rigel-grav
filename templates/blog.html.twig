@@ -18,13 +18,15 @@
         <section class="blog__items">
             {% for child in collection %}
                 {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
+                {% if not loop.last %}
+                    <hr class="blog__divider">
+                {% endif %}
             {% endfor %}
 
-            {% if config.plugins.pagination.enabled and collection.params.pagination %}
-                {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
-            {% endif %}
         </section>
-
+        {% if config.plugins.pagination.enabled and collection.params.pagination %}
+            {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+        {% endif %}
     {% endblock %}
 
 {% endembed %}

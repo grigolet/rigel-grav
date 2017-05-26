@@ -9,6 +9,7 @@ body
     color: $primary-text
     font-family: $bold-font-family
 
+
 .main
     flex: 1
 
@@ -39,17 +40,30 @@ body
         display: none
         position: absolute
         // top: 3rem
-        width: 90vw
-        left: 5vw
+        left: 0
+        width: 100%
         text-align: center
+        z-index: 1
+        background: $primary
+    &__item
+        padding: $spacing-5 0
+        a
+            color: $text
+            text-decoration: none
+            padding-bottom: $spacing-2
+            border-bottom: $spacing-0 solid $text
+            text-transform: uppercase
+
 
 .blog
     &__item
-        padding: $spacing-4
-        &:first-child
-            padding-top: 0
+        line-height: 1.25
+        padding: 0 $spacing-4 $spacing-4
     &__post
         padding: $spacing-4
+    &__divider
+        width: 90%
+        color: $divider
 
 .item
     &__title
@@ -58,7 +72,7 @@ body
         text-align: center
         font-weight: bolder
         font-size: $font-size-3
-        padding: $spacing-4 0
+        padding: $spacing-6 0 $spacing-5
         a
             color: $primary-text
             text-decoration: none
@@ -67,7 +81,7 @@ body
         width: 100%
         padding-bottom: 56.25%
         position: relative
-        margin-bottom: $spacing-5
+        margin-bottom: $spacing-4
         img
             position: absolute
             top: 0%
@@ -78,20 +92,19 @@ body
         font-family: $bold-font-family
         display: flex
         flex-direction: column
-        padding-bottom: $spacing-4
+        padding-bottom: $spacing-5
         > div
             display: flex
     &__info
         font-style: italic
         color: $secondary-text
-        padding-bottom: $spacing-3
+        padding-bottom: $spacing-4
     &__author
         flex: 3
     &__time
         flex: 1
     &__tags
         text-transform: uppercase
-        padding-bottom: $spacing-3
         p
             flex: 1
             font-weight: bolder
@@ -121,9 +134,21 @@ body
     padding-bottom: $spacing-5
     > li
         padding: 1rem
+        color: $secondary-text
+        a
+            color: $primary
+            text-decoration: none
+            padding: $spacing-4
+            &[rel="next"]
+                color: $primary
     >:first-child, >:last-child
         flex: 1
         text-align: center
+    &__item
+        &--active
+            padding: $spacing-4
+            color: $text
+            background: $primary
 
 .footer
     background: $primary
@@ -144,6 +169,12 @@ body
     &__read-more
         color: $secondary-text
         font-style: italic
+    &__content
+        a 
+            color: $dark-primary
+            text-decoration: none
+            padding-bottom: $spacing-1
+            border-bottom: $spacing-1 solid $primary
 
 .summary__content, .blog__post
     font-family: $font-family-1
@@ -179,3 +210,4 @@ body
         margin-bottom: $spacing-4
     pre
         font-family: $monospace-font-family
+        overflow-x: scroll

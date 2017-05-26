@@ -82,16 +82,28 @@ body {
 .menu__list {
   display: none;
   position: absolute;
-  width: 90vw;
-  left: 5vw;
-  text-align: center; }
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  background: #2196f3; }
+.menu__item {
+  padding: 2rem 0; }
+  .menu__item a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-bottom: 0.25rem;
+    border-bottom: 0.0625rem solid #FFFFFF;
+    text-transform: uppercase; }
 
 .blog__item {
-  padding: 1rem; }
-  .blog__item:first-child {
-    padding-top: 0; }
+  line-height: 1.25;
+  padding: 0 1rem 1rem; }
 .blog__post {
   padding: 1rem; }
+.blog__divider {
+  width: 90%;
+  color: #BDBDBD; }
 
 .item__title {
   font-family: "Computer Modern Bright", sans-serif;
@@ -99,7 +111,7 @@ body {
   text-align: center;
   font-weight: bolder;
   font-size: 1.75rem;
-  padding: 1rem 0; }
+  padding: 4rem 0 2rem; }
   .item__title a {
     color: #212121;
     text-decoration: none; }
@@ -107,7 +119,7 @@ body {
   width: 100%;
   padding-bottom: 56.25%;
   position: relative;
-  margin-bottom: 2rem; }
+  margin-bottom: 1rem; }
   .item__figure img {
     position: absolute;
     top: 0%;
@@ -118,20 +130,19 @@ body {
   font-family: "Computer Modern Bright", sans-serif;
   display: flex;
   flex-direction: column;
-  padding-bottom: 1rem; }
+  padding-bottom: 2rem; }
   .item__frontmatter > div {
     display: flex; }
 .item__info {
   font-style: italic;
   color: #757575;
-  padding-bottom: 0.5rem; }
+  padding-bottom: 1rem; }
 .item__author {
   flex: 3; }
 .item__time {
   flex: 1; }
 .item__tags {
-  text-transform: uppercase;
-  padding-bottom: 0.5rem; }
+  text-transform: uppercase; }
   .item__tags p {
     flex: 1;
     font-weight: bolder;
@@ -159,10 +170,21 @@ body {
   justify-content: space-around;
   padding-bottom: 2rem; }
   .pagination > li {
-    padding: 1rem; }
+    padding: 1rem;
+    color: #757575; }
+    .pagination > li a {
+      color: #2196f3;
+      text-decoration: none;
+      padding: 1rem; }
+      .pagination > li a[rel="next"] {
+        color: #2196f3; }
   .pagination > :first-child, .pagination > :last-child {
     flex: 1;
     text-align: center; }
+  .pagination__item--active {
+    padding: 1rem;
+    color: #FFFFFF;
+    background: #2196f3; }
 
 .footer {
   background: #2196f3;
@@ -182,6 +204,11 @@ body {
 .summary__read-more {
   color: #757575;
   font-style: italic; }
+.summary__content a {
+  color: #1976D2;
+  text-decoration: none;
+  padding-bottom: 0.125rem;
+  border-bottom: 0.125rem solid #2196f3; }
 
 .summary__content, .blog__post {
   font-family: "Computer Modern Bright"; }
@@ -216,6 +243,7 @@ body {
     padding: 1rem 0.5rem;
     margin-bottom: 1rem; }
   .summary__content pre, .blog__post pre {
-    font-family: "Computer Modern Typewriter"; }
+    font-family: "Computer Modern Typewriter";
+    overflow-x: scroll; }
 
 /*# sourceMappingURL=sm.css.map */
