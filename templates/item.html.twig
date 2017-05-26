@@ -5,7 +5,18 @@
 			{% include 'partials/breadcrumbs.html.twig' %}
 		{% endif %}
 
-		<article class="blog__post">
+        <h1 class="item__title">{{ page.title}}</h1>
+        <article class="blog__post">
+            {% if header_image %}
+                <figure class="item__figure">
+                    {% if header_image_file %}
+                        {% set header_image_media = page.media.images[header_image_file] %}
+                    {% else %}
+                        {% set header_image_media = page.media.images|first %}
+                    {% endif %}
+                    {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
+                </figure>
+            {% endif %}
 			{{ page.content }}
 		</article>
 		

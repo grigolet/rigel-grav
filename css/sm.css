@@ -2,6 +2,18 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(../fonts/computer-modern-web-font-master/font/Bright/cmun-bright.css);
+@import url(../fonts/computer-modern-web-font-master/font/Bright Semibold/cmun-bright-semibold.css);
+@import url(../fonts/computer-modern-web-font-master/font/Classical Serif Italic/cmun-classical-serif-italic.css);
+@import url(../fonts/computer-modern-web-font-master/font/Concrete/cmun-concrete.css);
+@import url(../fonts/computer-modern-web-font-master/font/Sans/cmun-sans.css);
+@import url(../fonts/computer-modern-web-font-master/font/Sans Demi-Condensed/cmun-sans-demicondensed.css);
+@import url(../fonts/computer-modern-web-font-master/font/Serif/cmun-serif.css);
+@import url(../fonts/computer-modern-web-font-master/font/Serif Slanted/cmun-serif-slanted.css);
+@import url(../fonts/computer-modern-web-font-master/font/Typewriter/cmun-typewriter.css);
+@import url(../fonts/computer-modern-web-font-master/font/Typewriter Light/cmun-typewriter-light.css);
+@import url(../fonts/computer-modern-web-font-master/font/Typewriter Variable/cmun-typewriter-variable.css);
+@import url(../fonts/computer-modern-web-font-master/font/Upright Italic/cmun-upright-italic.css);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -39,24 +51,19 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: #212121; }
+  color: #212121;
+  font-family: "Computer Modern Bright", sans-serif; }
 
 .main {
   flex: 1; }
-  .main > h1 {
-    font-family: "Raleway", sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    padding: 2rem 1rem; }
 
 .menu__header {
   display: flex;
   flex-direction: row;
-  background: #1976D2; }
+  background: #2196f3; }
 .menu__title {
   flex: 3;
   padding: 0.5rem 1rem;
-  font-family: "Raleway", sans-serif;
   font-size: 1.75rem; }
   .menu__title a {
     color: #FFFFFF;
@@ -67,10 +74,10 @@ body {
   justify-content: center;
   padding: 0.5rem 1rem; }
 .menu__button {
-  background: #1976D2;
+  background: #2196f3;
   border: none;
   color: #FFFFFF;
-  font-family: "Raleway", sans-serif;
+  font-family: "Computer Modern Bright", sans-serif;
   padding: 0; }
 .menu__list {
   display: none;
@@ -83,17 +90,24 @@ body {
   padding: 1rem; }
   .blog__item:first-child {
     padding-top: 0; }
+.blog__post {
+  padding: 1rem; }
 
 .item__title {
-  font-family: "Raleway", sans-serif;
+  font-family: "Computer Modern Bright", sans-serif;
   text-transform: uppercase;
-  font-size: 1.75rem; }
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.75rem;
+  padding: 1rem 0; }
   .item__title a {
+    color: #212121;
     text-decoration: none; }
 .item__figure {
   width: 100%;
   padding-bottom: 56.25%;
-  position: relative; }
+  position: relative;
+  margin-bottom: 2rem; }
   .item__figure img {
     position: absolute;
     top: 0%;
@@ -101,37 +115,107 @@ body {
     width: 100%;
     height: 100%; }
 .item__frontmatter {
+  font-family: "Computer Modern Bright", sans-serif;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-bottom: 1rem; }
   .item__frontmatter > div {
     display: flex; }
 .item__info {
   font-style: italic;
-  color: #757575; }
+  color: #757575;
+  padding-bottom: 0.5rem; }
 .item__author {
   flex: 3; }
 .item__time {
   flex: 1; }
 .item__tags {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding-bottom: 0.5rem; }
   .item__tags p {
     flex: 1;
-    font-weight: bolder; }
+    font-weight: bolder;
+    align-self: center; }
 
 .tags__list {
   flex: 3;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap; }
 .tags__item {
-  padding: 0 0.25rem;
-  text-decoration: none;
-  border: 0.125rem; }
+  padding-left: 0.5rem;
+  font-size: 13px; }
+  .tags__item a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.125rem 0.5rem;
+    margin: 0.125rem 0;
+    color: #2196f3;
+    border: 0.0625rem solid #2196f3;
+    border-radius: 0.25rem; }
 
-.footer__links {
+.pagination {
   display: flex;
-  justify-content: space-around; }
-.footer__designed-by {
-  text-align: center; }
+  justify-content: space-around;
+  padding-bottom: 2rem; }
+  .pagination > li {
+    padding: 1rem; }
+  .pagination > :first-child, .pagination > :last-child {
+    flex: 1;
+    text-align: center; }
+
+.footer {
+  background: #2196f3;
+  color: #FFFFFF; }
+  .footer__links {
+    text-decoration: none;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around; }
+    .footer__links a {
+      color: #FFFFFF;
+      text-decoration: none; }
+  .footer__designed-by {
+    text-align: center;
+    padding: 1rem; }
+
+.summary__read-more {
+  color: #757575;
+  font-style: italic; }
+
+.summary__content, .blog__post {
+  font-family: "Computer Modern Bright"; }
+  .summary__content h1, .summary__content h2, .summary__content h3, .summary__content h4, .summary__content h5, .summary__content h6, .blog__post h1, .blog__post h2, .blog__post h3, .blog__post h4, .blog__post h5, .blog__post h6 {
+    font-weight: bold;
+    padding-bottom: 0.5rem; }
+  .summary__content h1, .blog__post h1 {
+    font-size: 3rem; }
+  .summary__content h2, .blog__post h2 {
+    font-size: 2.25rem; }
+  .summary__content h3, .blog__post h3 {
+    font-size: 1.75rem; }
+  .summary__content h4, .blog__post h4 {
+    font-size: 1.25rem; }
+  .summary__content > p, .blog__post > p {
+    padding-bottom: 1rem; }
+    .summary__content > p:last-child, .blog__post > p:last-child {
+      padding-bottom: 2rem; }
+  .summary__content strong, .blog__post strong {
+    font-weight: bolder; }
+  .summary__content em, .blog__post em {
+    font-style: italic;
+    color: #757575; }
+  .summary__content hr, .blog__post hr {
+    height: 0.125rem;
+    color: #BDBDBD; }
+  .summary__content blockquote, .blog__post blockquote {
+    font-style: italic;
+    border-left: 0.25rem solid #757575;
+    background: #e8e8e8;
+    color: #757575;
+    padding: 1rem 0.5rem;
+    margin-bottom: 1rem; }
+  .summary__content pre, .blog__post pre {
+    font-family: "Computer Modern Typewriter"; }
 
 /*# sourceMappingURL=sm.css.map */

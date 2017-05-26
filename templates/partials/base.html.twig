@@ -12,7 +12,7 @@
 
     <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
-    {# <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet"> #}
+    {# <link href="https://fonts.googleapis.com/css?family=Raleway:900|Montserrat:300" rel="stylesheet"> #}
 
     {% block stylesheets %}
         {% do assets.addCss('theme://css/sm.css', {
@@ -90,7 +90,6 @@
                 </li>
             {% endfor %}
         </ul>
-        <hr>
         <h4 class="footer__designed-by">Designed by me</h4>
     </footer>
 {% endblock %}
