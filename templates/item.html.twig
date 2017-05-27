@@ -1,12 +1,14 @@
 {% embed 'partials/base.html.twig' %}
+{% set header_image = page.header.header_image|defined(false) %}
+{% set header_image_width  = page.header.header_image_width|defined(480) %}
+{% set header_image_height = page.header.header_image_height|defined(270) %}
+{% set header_image_file = page.header.header_image_file %}
 
 	{% block content %}
 		{% if config.plugins.breadcrumbs.enabled %}
 			{% include 'partials/breadcrumbs.html.twig' %}
 		{% endif %}
-
-        <h1 class="item__title">{{ page.title}}</h1>
-        <article class="blog__post">
+        <section class="blog__item blog__item--frontmatter">
             {% if header_image %}
                 <figure class="item__figure">
                     {% if header_image_file %}
@@ -17,6 +19,9 @@
                     {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
                 </figure>
             {% endif %}
+            <h1 class="item__title">{{ page.title}}</h1>
+        </section>
+        <article class="blog__post">
 			{{ page.content }}
 		</article>
 		
