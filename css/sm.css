@@ -55,7 +55,8 @@ body {
   font-family: "Computer Modern Bright", sans-serif; }
 
 .main {
-  flex: 1; }
+  flex: 1;
+  line-height: 1.55; }
 
 .menu__header {
   display: flex;
@@ -97,8 +98,9 @@ body {
     text-transform: uppercase; }
 
 .blog__item {
-  line-height: 1.25;
   padding: 0 1rem 1rem; }
+  .blog__item:first-child {
+    padding-top: 1rem; }
 .blog__post {
   padding: 1rem; }
 .blog__divider {
@@ -111,7 +113,7 @@ body {
   text-align: center;
   font-weight: bolder;
   font-size: 1.75rem;
-  padding: 4rem 0 2rem; }
+  padding: 2rem 0 2rem; }
   .item__title a {
     color: #212121;
     text-decoration: none; }
@@ -218,11 +220,17 @@ body {
   .summary__content h1, .blog__post h1 {
     font-size: 3rem; }
   .summary__content h2, .blog__post h2 {
-    font-size: 2.25rem; }
+    font-size: 2.25rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem; }
   .summary__content h3, .blog__post h3 {
-    font-size: 1.75rem; }
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem; }
   .summary__content h4, .blog__post h4 {
-    font-size: 1.25rem; }
+    font-size: 1.15rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem; }
   .summary__content > p, .blog__post > p {
     padding-bottom: 1rem; }
     .summary__content > p:last-child, .blog__post > p:last-child {
@@ -243,7 +251,14 @@ body {
     padding: 1rem 0.5rem;
     margin-bottom: 1rem; }
   .summary__content pre, .blog__post pre {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     font-family: "Computer Modern Typewriter";
     overflow-x: scroll; }
+  .summary__content a, .blog__post a {
+    text-decoration: none;
+    color: #1976D2;
+    padding-bottom: 0.0625rem;
+    border-bottom: 0.125rem solid #1976D2; }
 
 /*# sourceMappingURL=sm.css.map */
