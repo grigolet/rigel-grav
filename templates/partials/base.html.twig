@@ -21,6 +21,9 @@
         {% do assets.addCss('theme://css/md.css', {
             'media': 'screen and (min-width: 576px)'
         }) %}
+        {% do assets.addCss('theme://css/lg.css', {
+            'media': 'screen and (min-width: 1024px)'
+        }) %}
     {% endblock %}
     {{ assets.css() }}
 

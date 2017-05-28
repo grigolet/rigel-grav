@@ -1,5 +1,5 @@
 .menu__header {
-  margin: 0 24rem; }
+  align-items: center; }
 .menu__title {
   flex: 1; }
 .menu__navbar {
@@ -15,7 +15,8 @@
   justify-content: space-around; }
 
 .main {
-  margin: 0 24rem; }
+  max-width: 576px;
+  margin: 0 auto; }
   .main h1 {
     text-align: center; }
 

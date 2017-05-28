@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAEA,KAAK;EACD,SAAS,EAAE,OAAO;EAClB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,QAAQ;;AAEvB,YAAY;EACR,UAAU,EAAE,GAAG;;AAEnB,QAAQ;EACJ,OAAO,EAAE,OAAO;EAChB,UAAU,EAAE,GAAG;;AAEnB,WAAW;EACP,UAAU,EAAE,IAAI",
+"sources": ["../sass/lg.sass"],
 "names": [],
 "file": "lg.css"
 }
