@@ -8,7 +8,7 @@ body
     min-height: 100vh
     color: $primary-text
     font-family: $bold-font-family
-
+    background: $light-background
 
 .main
     flex: 1
@@ -59,14 +59,19 @@ body
 
 .blog
     &__item
-        padding: 0 $spacing-4 $spacing-4
+        background: $text
+        margin: $spacing-3
+        padding: $spacing-3
         &:first-child
-            padding-top: $spacing-4
+            margin-top: $spacing-3
     &__post
         padding: $spacing-4
     &__divider
         width: 90%
-        color: $divider
+        background: $primary
+        height: $spacing-0
+        border: 0
+        margin: $spacing-5 auto
 
 .item
     &__title
@@ -220,13 +225,17 @@ body
         color: $secondary-text
         padding: $spacing-4 $spacing-3
         margin-bottom: $spacing-4
-    pre
+    code[class*="language-"],
+    pre[class*="language-"] 
         padding-top: $spacing-4
         padding-bottom: $spacing-5
         font-family: $monospace-font-family
         overflow-x: scroll
+        font-size: 20px
     a
         text-decoration: none
         color: $dark-primary
         padding-bottom: $spacing-0
         border-bottom: $spacing-1 solid $dark-primary
+    img
+        max-width: 100%

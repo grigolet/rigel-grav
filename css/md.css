@@ -1,3 +1,9 @@
+a {
+  font-family: "Computer Modern Bright"; }
+
+body {
+  font-size: 20px; }
+
 .menu__header {
   align-items: center; }
 .menu__title {
@@ -6,18 +12,32 @@
   flex: 1; }
 .menu__item {
   list-style-type: none; }
+  .menu__item:not(:last-child) {
+    padding-right: 1rem; }
 .menu__button--hidden-md {
   display: none; }
 .menu__list {
   all: initial;
   display: flex;
   flex-grow: inherit;
-  justify-content: space-around; }
+  justify-content: flex-end; }
 
 .main {
   max-width: 576px;
   margin: 0 auto; }
   .main h1 {
     text-align: center; }
+
+.blog__item {
+  margin-top: 1rem;
+  padding-top: 1rem; }
+  .blog__item:first-child {
+    margin-top: 1rem; }
+  .blog__item--frontmatter {
+    margin: 0; }
+.blog__post {
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  background: #FFFFFF; }
 
 /*# sourceMappingURL=md.css.map */

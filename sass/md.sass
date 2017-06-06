@@ -1,5 +1,11 @@
 @import variables
 
+a
+    font-family: $font-family-1
+
+body
+    font-size: 20px
+
 .menu
     &__header
         // margin: 0 $spacing-9
@@ -10,6 +16,8 @@
         flex: 1
     &__item
         list-style-type: none
+        &:not(:last-child)
+            padding-right: $spacing-4
     &__button
         &--hidden-md
             display: none
@@ -17,9 +25,22 @@
         all: initial
         display: flex
         flex-grow: inherit
-        justify-content: space-around
+        justify-content: flex-end
 .main
     max-width: 576px
     margin: 0 auto
     h1
         text-align: center
+
+.blog
+    &__item
+        &:first-child
+            margin-top: $spacing-4
+        margin-top: $spacing-4
+        padding-top: $spacing-4
+        &--frontmatter
+            margin: 0
+    &__post
+        margin-bottom: $spacing-4
+        box-sizing: border-box
+        background: $text

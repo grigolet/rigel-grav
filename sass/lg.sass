@@ -1,16 +1,39 @@
 @import variables
 
+.menu
+    &__title
+        padding-left: $spacing-5
+    &__navbar
+        padding-right: $spacing-5
+
 .main
     max-width: initial
     display: flex
     flex-flow: row wrap
+    justify-content: center
 
-.blog__items
-    flex-basis: 50%
+.blog
+    &__divider
+        display: none
+    &__items
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        padding: 0 $spacing-6
+    &__item
+        flex-basis: 31%
+        box-sizing: border-box
+        &--frontmatter
+            max-width: 768px
+            flex-basis: 100%
+    &__post
+        max-width: 768px
+        pre
+            overflow-x: auto
 
 .sidebar
     display: initial
-    flex-basis: 50%
+    flex-basis: 35%
 
 .pagination
     flex-basis: 100%

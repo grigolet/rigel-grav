@@ -52,7 +52,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   color: #212121;
-  font-family: "Computer Modern Bright", sans-serif; }
+  font-family: "Computer Modern Bright", sans-serif;
+  background: whitesmoke; }
 
 .main {
   flex: 1;
@@ -98,14 +99,19 @@ body {
     text-transform: uppercase; }
 
 .blog__item {
-  padding: 0 1rem 1rem; }
+  background: #FFFFFF;
+  margin: 0.5rem;
+  padding: 0.5rem; }
   .blog__item:first-child {
-    padding-top: 1rem; }
+    margin-top: 0.5rem; }
 .blog__post {
   padding: 1rem; }
 .blog__divider {
   width: 90%;
-  color: #BDBDBD; }
+  background: #2196f3;
+  height: 0.0625rem;
+  border: 0;
+  margin: 2rem auto; }
 
 .item__title {
   font-family: "Computer Modern Bright", sans-serif;
@@ -253,15 +259,20 @@ body {
     color: #757575;
     padding: 1rem 0.5rem;
     margin-bottom: 1rem; }
-  .summary__content pre, .blog__post pre {
+  .summary__content code[class*="language-"],
+  .summary__content pre[class*="language-"], .blog__post code[class*="language-"],
+  .blog__post pre[class*="language-"] {
     padding-top: 1rem;
     padding-bottom: 2rem;
     font-family: "Computer Modern Typewriter";
-    overflow-x: scroll; }
+    overflow-x: scroll;
+    font-size: 20px; }
   .summary__content a, .blog__post a {
     text-decoration: none;
     color: #1976D2;
     padding-bottom: 0.0625rem;
     border-bottom: 0.125rem solid #1976D2; }
+  .summary__content img, .blog__post img {
+    max-width: 100%; }
 
 /*# sourceMappingURL=sm.css.map */
